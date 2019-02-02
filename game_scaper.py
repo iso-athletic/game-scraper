@@ -136,7 +136,7 @@ class GameScraper(object):
     def insertIntoDb(self):
         print('Cleaning database')
 
-        conn = psycopg2.connect("host="+os.eviron['pghost'] + " dbname="+os.environ['pgdb'] + " user="+os.environ['pguser'] + " password="+os.environ['pgpassword'] + " port="+os.environ['pgport'])
+        conn = psycopg2.connect("host="+os.environ['pghost'] + " dbname="+os.environ['pgdb'] + " user="+os.environ['pguser'] + " password="+os.environ['pgpassword'] + " port="+os.environ['pgport'])
         cur = conn.cursor()
 
         cur.execute("""
