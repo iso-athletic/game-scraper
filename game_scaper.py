@@ -164,7 +164,7 @@ class GameScraper(object):
 
 
 if __name__ == "__main__":
-    scraper = GameScraper(os.environ['teams'].split(',')), os.environ['years'].split(',')) # replace with variables
+    scraper = GameScraper(os.environ['teams'].split(','), os.environ['years'].split(',')) # replace with variables
     scraper.scrape()
     scraper.insertIntoDb()
     print('Done!')
